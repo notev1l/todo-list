@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Geom";
+  src: url(/assets/fonts/geom-v1-latin-regular.woff2) format("woff2"), url(/assets/fonts/geom-v1-latin-600.woff2) format("woff2"), url(/assets/fonts/geom-v1-latin-800.woff2) format("woff2");
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #97CEFF;
+}
+
+.todo-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  height: auto;
+  margin: 100px auto 0;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Geom";
+  font-size: 14px;
+  color: #EBEBEB;
+  background-color: #10376D;
+}
+.todo-list-wrapper h1,
+.todo-list-wrapper .input-block {
+  height: 40px;
+}
+
+.input-block {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #97CEFF;
+  align-content: center;
+}
+.input-block input {
+  width: 350px;
+  outline: none;
+  border: none;
+  background: none;
+  margin-left: 10px;
+  color: #333;
+  font-family: "Geom";
+  font-size: 16px;
+}
+.input-block input::placeholder {
+  color: #333;
+  font-family: "Geom";
+  font-size: 16px;
+}
+.input-block button {
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  font-family: "Geom";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  max-width: 460px;
+}
+
+.task-x {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  min-height: 40px;
+  height: auto;
+}
+.task-x input[type=checkbox] {
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  align-content: center;
+  background: none;
+  cursor: pointer;
+}
+.task-x input[type=checkbox]:checked {
+  background-color: #97CEFF;
+}
+.task-x input[type=checkbox]:checked::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  filter: invert(1);
+  background-image: url("/assets/images/check.svg");
+  background-size: cover;
+}
+.task-x .task-name {
+  max-width: 380px;
+  overflow-wrap: break-word;
+  line-height: 40px;
+}
+.task-x .delete-task-btn {
+  height: 30px;
+  width: 30px;
+  align-content: center;
+  margin-top: 5px;
+  margin-left: auto;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+.task-x .delete-task-btn img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+  filter: invert(1);
+}
+
+.strike-through {
+  text-decoration: line-through solid red 2px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,137 @@
+@use 'services/config';
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: config.$primary-color;
+}
+
+.todo-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  height: auto;
+  margin: 100px auto 0;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: config.$font-stack;
+  font-size: 14px;
+  color: config.$text-color;
+  background-color: config.$secondary-color;
+
+  h1,
+  .input-block {
+    height: 40px;
+  }
+}
+
+.input-block {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: config.$primary-color;
+  align-content: center;
+
+  input {
+    width: 350px;
+    outline: none;
+    border: none;
+    background: none;
+    margin-left: 10px;
+    color: #333;
+    font-family: config.$font-stack;
+    font-size: 16px;
+  }
+  input::placeholder {
+    color: #333;
+    font-family: config.$font-stack;
+    font-size: 16px;
+  }
+  button {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    font-family: config.$font-stack;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  max-width: 460px;
+}
+
+.task-x {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  min-height: 40px;
+  height: auto;
+
+  input[type='checkbox'] {
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    align-content: center;
+    background: none;
+    cursor: pointer;
+  }
+  input[type='checkbox']:checked {
+    background-color: config.$primary-color;
+  }
+  input[type='checkbox']:checked::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    filter: invert(1);
+    background-image: url('/assets/images/check.svg');
+    background-size: cover;
+  }
+
+  .task-name {
+    max-width: 380px;
+    overflow-wrap: break-word;
+    line-height: 40px;
+  }
+
+  .delete-task-btn {
+    height: 30px;
+    width: 30px;
+    align-content: center;
+    margin-top: 5px;
+    margin-left: auto;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    img {
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 0 auto;
+      filter: invert(1);
+    }
+  }
+}
+
+.strike-through {
+  text-decoration: line-through solid red 2px;
 }

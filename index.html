@@ -1,26 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>to-do list</title>
-    <link rel="stylesheet" href="./src/style.css">
-    <link rel="shortcut icon" href="./assets/images/#" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="shortcut icon" href="./assets/images/#" type="image/x-icon" />
+  </head>
+  <body>
     <div class="todo-list-wrapper">
-        <h1>To-Do List</h1>
-        <form class="input-block">
-            <input placeholder="Add you text" type="text">
-            <button type="submit">Add</button>
-        </form>
-        <div class="todos">
-            <div class="task-x">
-                <button type="radio"></button>
-                <h2 class="task-name">task name</h2>
-            </div>
-        </div>
+      <h1>To-Do List</h1>
+      <form class="input-block">
+        <input id="task-input" placeholder="Add you text" type="text" required/>
+        <button type="submit">Add</button>
+      </form>
+      <div class="todos">
+        <template id="task-template">
+          <div class="task-x">
+            <input class="check-task-btn" type="checkbox" />
+            <h2 class="task-name .strike-through"></h2>
+            <button class="delete-task-btn">
+              <img src="./assets/images/close.png" />
+            </button>
+          </div>
+        </template>
+      </div>
     </div>
-    <script src="app.js"></script>
-</body>
+    <script src="./src/app.js"></script>
+  </body>
 </html>

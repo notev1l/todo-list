@@ -1,0 +1,12 @@
+$primary-color: #97CEFF;
+$secondary-color: #10376D;
+$text-color: #EBEBEB;
+$font-stack: 'Geom';
+
+@font-face {
+    font-family: 'Geom';
+    src: url(/assets/fonts/geom-v1-latin-regular.woff2) format('woff2'),
+         url(/assets/fonts/geom-v1-latin-600.woff2) format('woff2'),
+         url(/assets/fonts/geom-v1-latin-800.woff2) format('woff2');
+    font-display: swap;
+}
