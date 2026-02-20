@@ -9,7 +9,19 @@
   </head>
   <body>
     <div class="todo-list-wrapper">
-      <h1>To-Do List</h1>
+      <div class="todo-header">
+        <h1>To-Do List</h1>
+        <div class="tasks-stat">
+          <div class="total-tasks">
+            <h2>Total<br>tasks</h2>
+            <h2 class="total-info">0</h2>
+          </div>
+          <div class="completed-tasks">
+            <h2>Completed<br>tasks</h2>
+            <h2 class="completed-info">0</h2>
+          </div>
+        </div>
+      </div>
       <form class="input-block">
         <input id="task-input" placeholder="Add you text" type="text" required/>
         <button type="submit">Add</button>

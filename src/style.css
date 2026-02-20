@@ -32,6 +32,28 @@ body {
   height: 40px;
 }
 
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks-stat {
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+}
+.tasks-stat .total-tasks, .tasks-stat .completed-tasks {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 1px;
+  overflow-wrap: break-word;
+}
+.tasks-stat .total-info, .tasks-stat .completed-info {
+  font-size: 40px;
+  line-height: 40px;
+}
+
 .input-block {
   display: flex;
   justify-content: space-between;
